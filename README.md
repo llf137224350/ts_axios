@@ -1,7 +1,8 @@
 ###ts_axios
 ```
 本项目为使用TypeScript仿写axios，具体实现为：
-1、实现了axios({})、axios.get({})、axios.post({})、axios.delete({})、axios.put({})、axios.options({})、axios.head({})、axios.patch({})以上八中调用方式，使用方式与官方axios一直。
+1、实现了axios({})、axios.get({})、axios.post({})、axios.delete({})、axios.put({})、axios.options({})、
+axios.head({})、axios.patch({})以上八中调用方式，使用方式与官方axios一直。
 2、支持配置拦截器。
 3、支持配置自己的transform
 4、支持请求未完成时中断请求
