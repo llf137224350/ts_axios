@@ -19,6 +19,7 @@ export interface IAxiosRequestConfig {
   onUploadProgress?: (e: ProgressEvent) => void
   auth?: IAxiosBasicCredentials
   validateStatus?: (status: number) => boolean
+  paramsSerializer?: (params: any) => string
 
   [propName: string]: any
 }

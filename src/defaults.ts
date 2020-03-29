@@ -1,6 +1,7 @@
 import { IAxiosRequestConfig } from './types'
 import { processHeader } from './helpers/headers'
 import { transformRequest, transformResponse } from './helpers/data'
+import qs from '_@types_qs@6.9.1@@types/qs'
 
 const defaults: IAxiosRequestConfig = {
   method: 'get',

@@ -29,8 +29,8 @@ function processConfig(config: IAxiosRequestConfig): void {
 
 // 处理url后面参数
 function transformUrl(config: IAxiosRequestConfig): string {
-  const { url, params } = config
-  return buildUrl(url!, params)
+  const { url, params, paramsSerializer } = config
+  return buildUrl(url!, params, paramsSerializer)
 }
 
 // 处理返回数据 如果返回数据为字符串，则尝试解析为json
