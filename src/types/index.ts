@@ -2,6 +2,7 @@ export type Method = 'get' | 'GET' | 'post' | 'POST' | 'delete' | 'DELETE' | 'pu
 
 // 请求参数类型
 export interface IAxiosRequestConfig {
+  baseUrl?: string
   url?: string // 请求路径
   method?: Method // 请求方法
   data?: any // post 请求时请求数据

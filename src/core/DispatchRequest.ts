@@ -1,6 +1,6 @@
 import { IAxiosRequestConfig, IAxiosPromise, IAxiosResponse } from '../types'
 import xhr from './xhr'
-import { buildUrl } from '../helpers/url'
+import { buildUrl, combineURL, isAbsoluteUrl } from '../helpers/url'
 import { transformRequest, transformResponse } from '../helpers/data'
 import { processHeader } from '../helpers/headers'
 import { flattenHeaders } from '../helpers/util'
@@ -29,7 +29,10 @@ function processConfig(config: IAxiosRequestConfig): void {
 
 // 处理url后面参数
 function transformUrl(config: IAxiosRequestConfig): string {
-  const { url, params, paramsSerializer } = config
+  let { url, params, paramsSerializer, baseUrl } = config
+  if (baseUrl && !isAbsoluteUrl(url!)) {
+    url = combineURL(baseUrl, url)
+  }
   return buildUrl(url!, params, paramsSerializer)
 }
 
